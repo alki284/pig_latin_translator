@@ -1,0 +1,18 @@
+def pig_translator():
+    text = "The quick brown fox jumps over the lazy dog"
+    words = text.split()
+    count = 0
+    final_text = " "
+    for l in words:
+        element = list(words[count])
+        element.insert(len(element), element[0])
+        element.pop(0)
+        element.append("ay")
+        pig = ""
+        pig = pig.join(element)
+        final_text = final_text + " " + pig
+        count += 1
+    print(final_text)
+
+
+pig_translator()
